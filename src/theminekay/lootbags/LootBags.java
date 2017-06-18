@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.economy.Economy;
 
 public class LootBags extends JavaPlugin{
@@ -36,4 +37,8 @@ public class LootBags extends JavaPlugin{
         econ = rsp.getProvider();
         return econ != null;
     }
+
+	public static String format(String string) {
+		return ChatColor.translateAlternateColorCodes('&', string);
+	}
 }
