@@ -2,8 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/coding/minecraft/libraries/Essentials/Essentials-2.x-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="D:/coding/minecraft/libraries/Paper Spigot/PaperSpigot-1.11.2-b1104.jar"/>
-	<classpathentry kind="lib" path="D:/coding/minecraft/libraries/Vault/Vault.jar"/>
+	<classpathentry kind="lib" path="libraries/Spigot/spigot-1.11.2-R0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libraries/Vault/Vault.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
