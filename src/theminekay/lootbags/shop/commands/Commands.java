@@ -26,7 +26,7 @@ public class Commands implements CommandExecutor {
 				player.playSound(player.getLocation(), Sound.BLOCK_NOTE_PLING, 1, 1);
 			}
 		}
-		return false;
+		return true;
 	}
 
 }
