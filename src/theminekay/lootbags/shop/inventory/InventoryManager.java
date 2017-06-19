@@ -1,16 +1,42 @@
 package theminekay.lootbags.shop.inventory;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import theminekay.lootbags.LootBags;
 
 public class InventoryManager {
 
+	public static ItemStack remove10 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta remove10Meta = remove10.getItemMeta();
+	public static ItemStack remove5 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta remove5Meta = remove5.getItemMeta();
+	public static ItemStack remove1 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta remove1Meta = remove1.getItemMeta();
+	public static ItemStack LootBag = new ItemStack(Material.BLAZE_ROD);
+	public static ItemMeta LootBagMeta = LootBag.getItemMeta();
+	public static ItemStack add1 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta add1Meta = add1.getItemMeta();
+	public static ItemStack add5 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta add5Meta = add5.getItemMeta();
+	public static ItemStack add10 = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta add10Meta = add10.getItemMeta();
+
+	
 	public static Inventory lootBagsShop = Bukkit.createInventory(null, 9 , LootBags.format("&5&lLootBags Shop"));
 
 	public static void setItems() {
-		// TODO Auto-generated method stub
+		lootBagsShop.setItem(1, remove10);
+		lootBagsShop.setItem(2, remove5);
+		lootBagsShop.setItem(3, remove1);
+		lootBagsShop.setItem(4, LootBag);
+		lootBagsShop.setItem(5, add1);
+		lootBagsShop.setItem(6, add5);
+		lootBagsShop.setItem(7, add10);
+		
 		
 	}
 
