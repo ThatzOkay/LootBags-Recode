@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.economy.Economy;
+import theminekay.lootbags.shop.register.RegisterShop;
 
 public class LootBags extends JavaPlugin{
 
@@ -22,6 +23,7 @@ public class LootBags extends JavaPlugin{
         if (!setupEconomy() ) {
             log.severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
             getServer().getPluginManager().disablePlugin(this);
+            RegisterShop.register(this);
             return;
         }
     }
