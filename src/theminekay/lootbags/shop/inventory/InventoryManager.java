@@ -24,9 +24,11 @@ public class InventoryManager {
 	public static ItemMeta add5Meta = add5.getItemMeta();
 	public static ItemStack add10 = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta add10Meta = add10.getItemMeta();
+	public static ItemStack buy = new ItemStack(Material.STAINED_GLASS_PANE);
+	public static ItemMeta buyMeta = add10.getItemMeta();
 
 	
-	public static Inventory lootBagsShop = Bukkit.createInventory(null, 9 , LootBags.format("&5&lLootBags Shop"));
+	public static Inventory lootBagsShop = Bukkit.createInventory(null, 18 , LootBags.format("&5&lLootBags Shop"));
 
 	public static void setItems() {
 		lootBagsShop.setItem(1, remove10);
@@ -36,6 +38,7 @@ public class InventoryManager {
 		lootBagsShop.setItem(5, add1);
 		lootBagsShop.setItem(6, add5);
 		lootBagsShop.setItem(7, add10);
+		lootBagsShop.setItem(13, buy);
 		
 		
 	}
