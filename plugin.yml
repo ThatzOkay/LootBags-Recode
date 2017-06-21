@@ -1,0 +1,6 @@
+name:LootBags
+version:1.0WIP
+main:theminekay.lootbags.LootBags
+commands:
+ lootbagshop:
+     Alias:[lbshop]
