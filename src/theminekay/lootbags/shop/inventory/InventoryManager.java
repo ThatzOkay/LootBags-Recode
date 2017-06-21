@@ -10,13 +10,15 @@ import theminekay.lootbags.LootBags;
 
 public class InventoryManager {
 
+	public static int lootBagAmount = 1;
+	
 	public static ItemStack remove10 = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta remove10Meta = remove10.getItemMeta();
 	public static ItemStack remove5 = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta remove5Meta = remove5.getItemMeta();
 	public static ItemStack remove1 = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta remove1Meta = remove1.getItemMeta();
-	public static ItemStack LootBag = new ItemStack(Material.BLAZE_ROD);
+	public static ItemStack LootBag = new ItemStack(Material.BLAZE_ROD , lootBagAmount);
 	public static ItemMeta LootBagMeta = LootBag.getItemMeta();
 	public static ItemStack add1 = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta add1Meta = add1.getItemMeta();
@@ -26,7 +28,6 @@ public class InventoryManager {
 	public static ItemMeta add10Meta = add10.getItemMeta();
 	public static ItemStack buy = new ItemStack(Material.STAINED_GLASS_PANE);
 	public static ItemMeta buyMeta = add10.getItemMeta();
-
 	
 	public static Inventory lootBagsShop = Bukkit.createInventory(null, 18 , LootBags.format("&5&lLootBags Shop"));
 
