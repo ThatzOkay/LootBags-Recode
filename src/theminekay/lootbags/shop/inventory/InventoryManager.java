@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import theminekay.lootbags.LootBags;
+import theminekay.lootbags.shop.listeners.OnInvClick;
 
 public class InventoryManager {
 
@@ -32,6 +33,9 @@ public class InventoryManager {
 	public static Inventory lootBagsShop = Bukkit.createInventory(null, 18 , LootBags.format("&5&lLootBags Shop"));
 
 	public static void setItems() {
+		lootBagAmount = 1;
+		lootBagsShop.clear();
+		OnInvClick.priceLore();
 		lootBagsShop.setItem(1, remove10);
 		lootBagsShop.setItem(2, remove5);
 		lootBagsShop.setItem(3, remove1);

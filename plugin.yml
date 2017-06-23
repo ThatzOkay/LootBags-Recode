@@ -1,7 +1,9 @@
-name:LootBags
-version:1.0WIP
-main:theminekay.lootbags.LootBags
+name: LootBags
+main: theminekay.lootbags.LootBags
+version: "1.0.0WIP"
+depend: [Vault]
+loadbefore: [Vault]
 commands:
   lootbagshop:
-    description: Set yourself on fire.
-    aliases: [lbshop]
+      description: The LootBag Shop
+      usage: /<command>

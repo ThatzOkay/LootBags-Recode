@@ -23,8 +23,9 @@ public class LootBags extends JavaPlugin{
         if (!setupEconomy() ) {
             log.severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
             getServer().getPluginManager().disablePlugin(this);
-            RegisterShop.register(this);
             return;
+        }else{
+            RegisterShop.register(this);
         }
     }
     
