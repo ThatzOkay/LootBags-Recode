@@ -1,5 +1,7 @@
 package theminekay.lootbags.shop.inventory;
 
+import java.util.ArrayList;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -36,6 +38,13 @@ public class InventoryManager {
 		lootBagAmount = 1;
 		lootBagsShop.clear();
 		OnInvClick.priceLore();
+		ArrayList<String> remove10Lore = new ArrayList<>();
+		remove10Lore.add("Remove 10");
+		remove10Lore.add("LootBags");
+		remove10Meta.setDisplayName(LootBags.format("&4Remove 10"));
+		remove10Meta.setLore(remove10Lore);
+		remove10.setDurability((short) 14);
+		remove10.setItemMeta(remove10Meta);
 		lootBagsShop.setItem(1, remove10);
 		lootBagsShop.setItem(2, remove5);
 		lootBagsShop.setItem(3, remove1);
@@ -46,6 +55,10 @@ public class InventoryManager {
 		lootBagsShop.setItem(13, buy);
 		
 		
+	}
+	
+	public void setLootBag(){
+		lootBagsShop.setItem(4, LootBag);
 	}
 
 }
