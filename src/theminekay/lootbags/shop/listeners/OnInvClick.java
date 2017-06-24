@@ -20,9 +20,22 @@ public class OnInvClick implements Listener{
 		Inventory inv = e.getInventory();
 		if(inv.equals(InventoryManager.lootBagsShop)){
 			ItemStack item = e.getCurrentItem();
-			if(item.getItemMeta().equals(InventoryManager.add1.getItemMeta())){
-				
+			if(item.equals(InventoryManager.remove10)){
+				if(InventoryManager.lootBagAmount > 1){
+					InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount - 10);
+					priceLore();
+				}
+				if(InventoryManager.lootBagAmount < 1){
+					InventoryManager.lootBagAmount = 1;
+					priceLore();
+				}
+				e.setCancelled(true);
+				System.out.println(InventoryManager.lootBagAmount);
 			}
+			if(item.equals(null)){
+				e.setCancelled(true);
+			}
+			
 		}
 	}
 	
