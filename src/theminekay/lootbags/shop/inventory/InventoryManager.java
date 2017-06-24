@@ -45,7 +45,14 @@ public class InventoryManager {
 		remove10Meta.setLore(remove10Lore);
 		remove10.setDurability((short) 14);
 		remove10.setItemMeta(remove10Meta);
-		lootBagsShop.setItem(1, remove10);
+		lootBagsShop.setItem(1, remove10);		
+		ArrayList<String> remove5Lore = new ArrayList<>();
+		remove5Lore.add("Remove 5");
+		remove5Lore.add("LootBags");
+		remove5Meta.setDisplayName(LootBags.format("&4Remove 5"));
+		remove5Meta.setLore(remove5Lore);
+		remove5.setDurability((short) 14);
+		remove5.setItemMeta(remove5Meta);
 		lootBagsShop.setItem(2, remove5);
 		lootBagsShop.setItem(3, remove1);
 		lootBagsShop.setItem(4, LootBag);
