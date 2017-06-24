@@ -38,27 +38,37 @@ public class InventoryManager {
 		lootBagAmount = 1;
 		lootBagsShop.clear();
 		OnInvClick.priceLore();
-		ArrayList<String> remove10Lore = new ArrayList<>();
-		remove10Lore.add("Remove 10");
-		remove10Lore.add("LootBags");
 		remove10Meta.setDisplayName(LootBags.format("&4Remove 10"));
-		remove10Meta.setLore(remove10Lore);
 		remove10.setDurability((short) 14);
 		remove10.setItemMeta(remove10Meta);
 		lootBagsShop.setItem(1, remove10);		
-		ArrayList<String> remove5Lore = new ArrayList<>();
-		remove5Lore.add("Remove 5");
-		remove5Lore.add("LootBags");
 		remove5Meta.setDisplayName(LootBags.format("&4Remove 5"));
-		remove5Meta.setLore(remove5Lore);
 		remove5.setDurability((short) 14);
 		remove5.setItemMeta(remove5Meta);
 		lootBagsShop.setItem(2, remove5);
+		ArrayList<String> remove1Lore = new ArrayList<>();
+		remove1Lore.add(LootBags.format("&4Remove 1 Lootbags"));
+		remove1Meta.setDisplayName(LootBags.format("&4Remove 1"));
+		remove1.setDurability((short) 14);
+		remove1.setItemMeta(remove1Meta);
 		lootBagsShop.setItem(3, remove1);
+		
 		lootBagsShop.setItem(4, LootBag);
+		add1Meta.setDisplayName(LootBags.format("&2Add 1"));
+		add1.setDurability((short) 5);
+		add1.setItemMeta(add1Meta);
 		lootBagsShop.setItem(5, add1);
+		add5Meta.setDisplayName(LootBags.format("&2Add 5"));
+		add5.setDurability((short) 5);
+		add5.setItemMeta(add5Meta);
 		lootBagsShop.setItem(6, add5);
+		add10Meta.setDisplayName(LootBags.format("&2Add 10"));
+		add10.setDurability((short) 5);
+		add10.setItemMeta(add10Meta);
 		lootBagsShop.setItem(7, add10);
+		buyMeta.setDisplayName(LootBags.format("&8Buy"));
+		buy.setDurability((short) 15);
+		buy.setItemMeta(buyMeta);
 		lootBagsShop.setItem(13, buy);
 		
 		

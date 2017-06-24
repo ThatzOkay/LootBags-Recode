@@ -30,12 +30,54 @@ public class OnInvClick implements Listener{
 					priceLore();
 				}
 				e.setCancelled(true);
-				System.out.println(InventoryManager.lootBagAmount);
 			}
+			if(item.equals(InventoryManager.remove5)){
+				if(InventoryManager.lootBagAmount > 1){
+					InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount - 5);
+					priceLore();
+				}
+				if(InventoryManager.lootBagAmount < 1){
+					InventoryManager.lootBagAmount = 1;
+					priceLore();
+				}
+				e.setCancelled(true);
+			}
+			if(item.equals(InventoryManager.remove1)){
+				if(InventoryManager.lootBagAmount > 1){
+					InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount - 1);
+					priceLore();
+				}
+				if(InventoryManager.lootBagAmount < 1){
+					InventoryManager.lootBagAmount = 1;
+					priceLore();
+				}
+				e.setCancelled(true);
+			}
+			if(item.equals(InventoryManager.add1)){
+					InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount + 1);
+					priceLore();
+
+				e.setCancelled(true);
+
+			}
+			if(item.equals(InventoryManager.add5)){
+				InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount + 5);
+				priceLore();
+
+			e.setCancelled(true);
+
+		}
+			if(item.equals(InventoryManager.add10)){
+				InventoryManager.lootBagAmount = new Integer(InventoryManager.lootBagAmount + 10);
+				priceLore();
+
+			e.setCancelled(true);
+
+		}
 			if(item.equals(null)){
 				e.setCancelled(true);
 			}
-			
+			System.out.println(InventoryManager.lootBagAmount + " " + PriceCalculator.calculatedPrice);
 		}
 	}
 	

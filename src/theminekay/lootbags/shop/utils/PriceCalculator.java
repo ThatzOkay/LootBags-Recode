@@ -8,9 +8,9 @@ import theminekay.lootbags.shop.inventory.InventoryManager;
 
 public class PriceCalculator {
 
-	private static double normalPrice = 100.50;
+	public static int normalPrice = (int) 100.50;
 	
-	public static double calculatedPrice = normalPrice * InventoryManager.lootBagAmount;
+	public static double calculatedPrice = new Double(normalPrice * InventoryManager.lootBagAmount);
 	
 	public void removeMoney(Player player){
 		LootBags.getEcon().depositPlayer(player, calculatedPrice);
