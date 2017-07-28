@@ -77,7 +77,7 @@ public class OnInvClick implements Listener{
 			if(item.equals(null)){
 				e.setCancelled(true);
 			}
-			System.out.println(InventoryManager.lootBagAmount + " " + PriceCalculator.calculatedPrice);
+			System.out.println(InventoryManager.lootBagAmount + " " + 100.50 * InventoryManager.lootBagAmount + " " + PriceCalculator.normalPrice);
 		}
 	}
 	
