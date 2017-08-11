@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.economy.Economy;
-import theminekay.lootbags.shop.register.RegisterShop;
+import theminekay.lootbags.lootbags.register.RegisterlootBags;
 
 public class LootBags extends JavaPlugin{
 
@@ -25,7 +25,7 @@ public class LootBags extends JavaPlugin{
             getServer().getPluginManager().disablePlugin(this);
             return;
         }else{
-            RegisterShop.register(this);
+            RegisterlootBags.register(this);
         }
     }
     

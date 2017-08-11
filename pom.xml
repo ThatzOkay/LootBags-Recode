@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>nl.mrhoichicheung</groupId>
+	<artifactId>lootbags</artifactId>
+	<packaging>jar</packaging>
+
+	<name>nl.mrhoichicheung</name>
+	<url>http://maven.apache.org</url>
+
+	<build>
+		<defaultGoal>clean package install</defaultGoal>
+		<finalName>LootBags</finalName>
+		<sourceDirectory>${basedir}/src/</sourceDirectory>
+		<resources>
+			<resource>
+				<targetPath>.</targetPath>
+				<filtering>true</filtering>
+				<directory>${basedir}</directory>
+				<includes>
+					<include>*.yml</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+    <dependency>
+        <groupId>org.spigotmc</groupId>
+        <artifactId>spigot-api</artifactId>
+        <version>1.12-R0.1-SNAPSHOT</version>
+        <scope>provided</scope>
+    </dependency>
+		<dependency>
+			<groupId>net.milkbowl.vault</groupId>
+			<artifactId>VaultAPI</artifactId>
+			<version>LATEST</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>vault-repo</id>
+			<url>http://nexus.hc.to/content/repositories/pub_releases</url>
+		</repository>
+	</repositories>
+	<version>3.0.6.11</version>
+	<description>This pom contains reference to a lot of servers that are not included in the GitHub repository because they are binary objects and maybe subject to copyright. These are used so that the NMS code that is used especially for pasting of islands can operate. Before you can build successfully, you need to put zero or more server binaries into the lib directory on your build machine. This version will match the version of the server you will use, for example 1.12. Then delete all the unneeded packages in com.wasteofplastic.askyblock.nms that you do not need or do not have. This will allow you to build. If you have no server binaries and delete all the packages, the Bukkit API will be used instead of NMS, which is slow and not recommended. Good luck!</description>
+</project>
