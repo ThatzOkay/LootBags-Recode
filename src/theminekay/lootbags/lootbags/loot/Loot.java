@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class Loot {
 
-    public static List<ItemStack> loot = new ArrayList<>();
+    private static List<ItemStack> loot = new ArrayList<>();
 
     public static void setItems(){
         Random rand = new Random();
@@ -42,6 +42,10 @@ public class Loot {
         loot.add(new ItemStack(Material.BEETROOT_SEEDS , amount2));
         loot.add(new ItemStack(Material.BEETROOT_SOUP));
         loot.add(new ItemStack(Material.BIRCH_DOOR_ITEM , amount3));
+        loot.add(new ItemStack(Material.BIRCH_FENCE, amount4));
+        loot.add(new ItemStack(Material.BIRCH_FENCE_GATE, amount5));
+        loot.add(new ItemStack(Material.BIRCH_WOOD_STAIRS, amount6));
+        loot.add(new ItemStack(Material.BLACK_GLAZED_TERRACOTTA, amount7));
 
 
 
