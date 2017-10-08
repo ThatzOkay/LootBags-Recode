@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.economy.Economy;
 import theminekay.lootbags.lootbags.register.RegisterlootBags;
+import theminekay.lootbags.lootbags.shop.register.RegisterShop;
 
 public class LootBags extends JavaPlugin{
 
@@ -26,6 +27,7 @@ public class LootBags extends JavaPlugin{
             return;
         }else{
             RegisterlootBags.register(this);
+            RegisterShop.register(this);
         }
     }
     

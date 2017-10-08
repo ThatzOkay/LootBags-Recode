@@ -1,4 +1,4 @@
-package theminekay.lootbags.shop.listeners;
+package theminekay.lootbags.lootbags.shop.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import theminekay.lootbags.LootBags;
-import theminekay.lootbags.shop.inventory.InventoryManager;
-import theminekay.lootbags.shop.utils.PriceCalculator;
+import theminekay.lootbags.lootbags.shop.inventory.InventoryManager;
+import theminekay.lootbags.lootbags.shop.utils.PriceCalculator;
 
 public class OnInvClick implements Listener{
 

@@ -1,4 +1,4 @@
-package theminekay.lootbags.shop.inventory;
+package theminekay.lootbags.lootbags.shop.inventory;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import theminekay.lootbags.LootBags;
-import theminekay.lootbags.shop.listeners.OnInvClick;
+import theminekay.lootbags.lootbags.shop.listeners.OnInvClick;
 
 public class InventoryManager {
 

@@ -1,9 +1,13 @@
+theminekay\lootbags\lootbags\shop\utils\PriceCalculator.class
+theminekay\lootbags\LootBags.class
+theminekay\lootbags\lootbags\shop\commands\Commands.class
+theminekay\lootbags\lootbags\loot\Loot.class
+theminekay\lootbags\utils\Utils.class
 theminekay\lootbags\lootbags\commands\Commands.class
 theminekay\lootbags\utils\Items.class
+theminekay\lootbags\lootbags\shop\inventory\InventoryManager.class
 theminekay\lootbags\lootbags\events\Events.class
 theminekay\lootbags\lootbags\ivnetory\InventoryManager.class
-theminekay\lootbags\utils\ItemRandomizers.class
-theminekay\lootbags\LootBags.class
-theminekay\lootbags\lootbags\loot\Loot.class
+theminekay\lootbags\lootbags\shop\register\RegisterShop.class
+theminekay\lootbags\lootbags\shop\listeners\OnInvClick.class
 theminekay\lootbags\lootbags\register\RegisterlootBags.class
-theminekay\lootbags\utils\Utils.class

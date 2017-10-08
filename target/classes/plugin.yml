@@ -2,8 +2,10 @@ name: LootBags
 main: theminekay.lootbags.LootBags
 version: "1.0.0WIP"
 depend: [Vault]
-loadbefore: [Vault]
 commands:
   lootbags:
       description: The Main LootBag Command
+      usage: /<command>
+  lootbagshop:
+      description: The LootBags Shop command
       usage: /<command>

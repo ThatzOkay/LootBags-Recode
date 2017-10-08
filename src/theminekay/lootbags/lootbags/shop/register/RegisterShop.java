@@ -1,10 +1,10 @@
-package theminekay.lootbags.shop.register;
+package theminekay.lootbags.lootbags.shop.register;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import theminekay.lootbags.shop.commands.Commands;
-import theminekay.lootbags.shop.listeners.OnInvClick;
+import theminekay.lootbags.lootbags.shop.commands.Commands;
+import theminekay.lootbags.lootbags.shop.listeners.OnInvClick;
 
 public class RegisterShop {
 
