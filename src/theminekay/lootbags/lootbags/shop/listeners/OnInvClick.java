@@ -139,7 +139,7 @@ public class OnInvClick implements Listener{
 		buy.setDurability((short) 15);
 		List<String> lore = new ArrayList<>();
 		lore.clear();
-		lore.add("$" + PriceCalculator.calculatedPrice);
+		lore.add("$" + PriceCalculator.calculatePrice());
 		buyMeta.setLore(lore);
 		buy.setItemMeta(buyMeta);
 		InventoryManager.lootBagsShop.remove(buy);

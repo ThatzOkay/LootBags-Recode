@@ -1,6 +1,5 @@
 package theminekay.lootbags.lootbags.register;
 
-import org.bukkit.Bukkit;
 import theminekay.lootbags.LootBags;
 import theminekay.lootbags.lootbags.commands.Commands;
 import theminekay.lootbags.lootbags.events.Events;
