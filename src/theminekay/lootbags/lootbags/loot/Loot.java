@@ -2,7 +2,8 @@ package theminekay.lootbags.lootbags.loot;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import theminekay.lootbags.lootbags.ivnetory.InventoryManager;
+
+import theminekay.lootbags.lootbags.inventory.InventoryManager;
 import theminekay.lootbags.utils.Items;
 
 import java.util.ArrayList;

@@ -6,7 +6,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import theminekay.lootbags.lootbags.ivnetory.InventoryManager;
+
+import theminekay.lootbags.lootbags.inventory.InventoryManager;
 import theminekay.lootbags.lootbags.loot.Loot;
 import theminekay.lootbags.utils.Items;
 

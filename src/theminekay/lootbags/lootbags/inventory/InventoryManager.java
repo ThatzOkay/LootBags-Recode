@@ -1,4 +1,4 @@
-package theminekay.lootbags.lootbags.ivnetory;
+package theminekay.lootbags.lootbags.inventory;
 
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
