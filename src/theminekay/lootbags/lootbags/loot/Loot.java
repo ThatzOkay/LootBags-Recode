@@ -2,7 +2,7 @@ package theminekay.lootbags.lootbags.loot;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-
+import theminekay.lootbags.LootBags;
 import theminekay.lootbags.lootbags.inventory.InventoryManager;
 import theminekay.lootbags.utils.Items;
 
@@ -14,39 +14,15 @@ public class Loot {
 
     private static List<ItemStack> loot = new ArrayList<>();
 
-    public static void setItems(){
-        Random rand = new Random();
-        short data = ((short) rand.nextInt(15));
-        int amount = rand.nextInt(7) + 1;
-        int amount2 = rand.nextInt(7) + 1;
-        int amount3 = rand.nextInt(7) + 1;
-        int amount4 = rand.nextInt(7) + 1;
-        int amount5 = rand.nextInt(7) + 1;
-        int amount6 = rand.nextInt(7) + 1;
-        int amount7 = rand.nextInt(7) + 1;
-        int amount8 = rand.nextInt(7) + 1;
-        int amount9 = rand.nextInt(7) + 1;
-        loot.add(new ItemStack(Material.ACACIA_DOOR_ITEM , amount));
-        loot.add(new ItemStack(Material.ACACIA_FENCE , amount2));
-        loot.add(new ItemStack(Material.ACACIA_FENCE_GATE , amount3));
-        loot.add(new ItemStack(Material.ACACIA_STAIRS , amount4));
-        loot.add(new ItemStack(Material.ACTIVATOR_RAIL , amount5));
-        loot.add(new ItemStack(Material.ANVIL));
-        loot.add(new ItemStack(Material.APPLE , amount6));
-        loot.add(new ItemStack(Material.ARMOR_STAND));
-        loot.add(new ItemStack(Material.ARROW , amount7));
-        loot.add(new ItemStack(Material.BAKED_POTATO , amount8));
-        loot.add(new ItemStack(Material.BANNER , amount9 , data));
-        loot.add(new ItemStack(Material.BEACON));
-        loot.add(new ItemStack(Material.BED , 1 , data));
-        loot.add(new ItemStack(Material.BEETROOT , amount));
-        loot.add(new ItemStack(Material.BEETROOT_SEEDS , amount2));
-        loot.add(new ItemStack(Material.BEETROOT_SOUP));
-        loot.add(new ItemStack(Material.BIRCH_DOOR_ITEM , amount3));
-        loot.add(new ItemStack(Material.BIRCH_FENCE, amount4));
-        loot.add(new ItemStack(Material.BIRCH_FENCE_GATE, amount5));
-        loot.add(new ItemStack(Material.BIRCH_WOOD_STAIRS, amount6));
-        loot.add(new ItemStack(Material.BLACK_GLAZED_TERRACOTTA, amount7));
+    private static ItemStack air = new ItemStack(Material.AIR);
+
+    public static void setItems(LootBags lb) {
+        for(Material m : Material.values()){
+            loot.add(new ItemStack(m));
+        }
+        if(loot.contains(air)) {
+            loot.remove(air);
+        }
 
 
 
@@ -70,7 +46,6 @@ public class Loot {
         ItemStack lootInBag8 = loot.get(randomloot8);
         ItemStack lootInBag9 = loot.get(randomloot9);
 
-        System.out.println(amount + "  " + amount2 + "  " +amount3 + "  " +amount4 + "  " +amount5 + "  " +amount6 + "  " +amount7 + "  " +amount8 + "  " +amount9);
         InventoryManager.lootBags.clear();
         Items.setItemMeta();
         InventoryManager.lootBags.setItem(0, lootInBag);

@@ -5,5 +5,5 @@ import org.bukkit.inventory.Inventory;
 
 public class InventoryManager {
 
-    public static Inventory lootBags = Bukkit.createInventory(null , 9 , "");
+    public static Inventory lootBags = Bukkit.createInventory(null, 9, "");
 }

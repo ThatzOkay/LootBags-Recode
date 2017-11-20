@@ -10,6 +10,6 @@ public class RegisterlootBags {
     public static void register(LootBags lootBags) {
         lootBags.getCommand("lootbags").setExecutor(new Commands());
         lootBags.getCommand("lootbags").setTabCompleter(new Commands());
-        lootBags.getServer().getPluginManager().registerEvents(new Events() , lootBags);
+        lootBags.getServer().getPluginManager().registerEvents(new Events(), lootBags);
     }
 }

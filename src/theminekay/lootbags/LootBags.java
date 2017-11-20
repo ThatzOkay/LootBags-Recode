@@ -1,49 +1,57 @@
 package theminekay.lootbags;
 
-import java.util.logging.Logger;
-
+import net.milkbowl.vault.economy.Economy;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import net.md_5.bungee.api.ChatColor;
-import net.milkbowl.vault.economy.Economy;
 import theminekay.lootbags.lootbags.register.RegisterlootBags;
 import theminekay.lootbags.lootbags.shop.register.RegisterShop;
 
-public class LootBags extends JavaPlugin{
+import java.util.logging.Logger;
 
-    private static final Logger log = Logger.getLogger("Minecraft");
-    private static Economy econ = null;
-    
-    public static Economy getEcon(){
-    	return econ;
+public class LootBags extends JavaPlugin {
+
+    private static LootBags lootBags;
+
+    private final Logger log = Logger.getLogger("Minecraft");
+    private  Economy econ = null;
+
+    public  Economy getEcon() {
+        return econ;
     }
-	
+
+    public static String format(String string) {
+        return ChatColor.translateAlternateColorCodes('&', string);
+    }
+
+    public static LootBags getLootBags(){
+        return lootBags;
+    }
+
     @Override
     public void onEnable() {
-        if (!setupEconomy() ) {
+        if (!setupEconomy()) {
             log.severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
             getServer().getPluginManager().disablePlugin(this);
             return;
-        }else{
+        } else {
             RegisterlootBags.register(this);
             RegisterShop.register(this);
         }
     }
-    
+
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
+            System.out.println("test1");
             return false;
+
         }
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
         if (rsp == null) {
+            System.out.println("test2");
             return false;
         }
         econ = rsp.getProvider();
         return econ != null;
     }
-
-	public static String format(String string) {
-		return ChatColor.translateAlternateColorCodes('&', string);
-	}
 }

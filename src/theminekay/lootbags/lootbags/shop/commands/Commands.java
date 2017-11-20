@@ -6,24 +6,26 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-
+import theminekay.lootbags.LootBags;
 import theminekay.lootbags.lootbags.shop.inventory.InventoryManager;
 
 public class Commands implements CommandExecutor {
 
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String name, String[] args) {
-		if(sender instanceof Player){
-			if(cmd.getName().equalsIgnoreCase("lootbagshop") || cmd.getName().equalsIgnoreCase("lbhop")){
-				Player player = (Player)sender;
-				Inventory shop = InventoryManager.lootBagsShop;
-				InventoryManager.setItems();
-				player.openInventory(shop);
-				player.playSound(player.getLocation(), Sound.BLOCK_NOTE_PLING, 1, 1);
-				//Bukkit.getScheduler().
-			}
-		}
-		return true;
-	}
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String name, String[] args) {
+        if (sender instanceof Player) {
+            LootBags lb = LootBags.getLootBags();
+            if (cmd.getName().equalsIgnoreCase("lootbagshop") || cmd.getName().equalsIgnoreCase("lbhop")) {
+                Player player = (Player) sender;
+                Inventory shop = InventoryManager.lootBagsShop;
+                InventoryManager.setItems(lb);
+                shop.clear();
+                player.openInventory(shop);
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_PLING, 1, 1);
+                //Bukkit.getScheduler().
+            }
+        }
+        return true;
+    }
 
 }
