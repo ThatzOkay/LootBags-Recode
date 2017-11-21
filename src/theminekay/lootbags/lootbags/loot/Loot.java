@@ -14,14 +14,41 @@ public class Loot {
 
     private static List<ItemStack> loot = new ArrayList<>();
 
-    private static ItemStack air = new ItemStack(Material.AIR);
-
     public static void setItems(LootBags lb) {
         for(Material m : Material.values()){
             loot.add(new ItemStack(m));
         }
-        if(loot.contains(air)) {
+        if(loot.contains(new ItemStack(Material.AIR))) {
+            ItemStack air = new ItemStack(Material.AIR);
             loot.remove(air);
+        }
+        if(loot.contains(new ItemStack(Material.STONE))){
+            ItemStack stone = new ItemStack(Material.STONE);
+            loot.remove(stone);
+            Random rand = new Random();
+            int stoneType = rand.nextInt(6);
+            stone = new ItemStack(Material.STONE , 1 , (short)stoneType);
+            loot.add(stone);
+        }
+        if (loot.contains(new ItemStack(Material.DIRT))){
+            ItemStack dirt = new ItemStack(Material.DIRT);
+            loot.remove(dirt);
+            Random rand = new Random();
+            int dirtType = rand.nextInt(2);
+            dirt = new ItemStack(Material.DIRT , 1 , (short)dirtType);
+            loot.add(dirt);
+        }
+        if (loot.contains(new ItemStack(Material.WOOD))){
+            ItemStack wood = new ItemStack(Material.WOOD);
+            loot.remove(wood);
+            Random rand = new Random();
+            int dirtType = rand.nextInt(5);
+            wood = new ItemStack(Material.WOOD , 1 , (short)dirtType);
+            loot.add(wood);
+        }
+        if(loot.contains(new ItemStack(Material.SAPLING))){
+            ItemStack sapling = new ItemStack(Material.SAPLING);
+            loot.remove(sapling);
         }
 
 
