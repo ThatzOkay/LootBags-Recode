@@ -12,43 +12,14 @@ import java.util.Random;
 
 public class Loot {
 
-    private static List<ItemStack> loot = new ArrayList<>();
+    private static List<Material> loot = new ArrayList<>();
 
     public static void setItems(LootBags lb) {
         for(Material m : Material.values()){
-            loot.add(new ItemStack(m));
+            loot.add(m);
         }
-        if(loot.contains(new ItemStack(Material.AIR))) {
-            ItemStack air = new ItemStack(Material.AIR);
-            loot.remove(air);
-        }
-        if(loot.contains(new ItemStack(Material.STONE))){
-            ItemStack stone = new ItemStack(Material.STONE);
-            loot.remove(stone);
-            Random rand = new Random();
-            int stoneType = rand.nextInt(6);
-            stone = new ItemStack(Material.STONE , 1 , (short)stoneType);
-            loot.add(stone);
-        }
-        if (loot.contains(new ItemStack(Material.DIRT))){
-            ItemStack dirt = new ItemStack(Material.DIRT);
-            loot.remove(dirt);
-            Random rand = new Random();
-            int dirtType = rand.nextInt(2);
-            dirt = new ItemStack(Material.DIRT , 1 , (short)dirtType);
-            loot.add(dirt);
-        }
-        if (loot.contains(new ItemStack(Material.WOOD))){
-            ItemStack wood = new ItemStack(Material.WOOD);
-            loot.remove(wood);
-            Random rand = new Random();
-            int dirtType = rand.nextInt(5);
-            wood = new ItemStack(Material.WOOD , 1 , (short)dirtType);
-            loot.add(wood);
-        }
-        if(loot.contains(new ItemStack(Material.SAPLING))){
-            ItemStack sapling = new ItemStack(Material.SAPLING);
-            loot.remove(sapling);
+        if(loot.contains(Material.AIR)) {
+            loot.remove(Material.AIR);
         }
 
 
@@ -63,26 +34,28 @@ public class Loot {
         int randomloot7 = random.nextInt(loot.size());
         int randomloot8 = random.nextInt(loot.size());
         int randomloot9 = random.nextInt(loot.size());
-        ItemStack lootInBag = loot.get(randomloot);
-        ItemStack lootInBag2 = loot.get(randomloot2);
-        ItemStack lootInBag3 = loot.get(randomloot3);
-        ItemStack lootInBag4 = loot.get(randomloot4);
-        ItemStack lootInBag5 = loot.get(randomloot5);
-        ItemStack lootInBag6 = loot.get(randomloot6);
-        ItemStack lootInBag7 = loot.get(randomloot7);
-        ItemStack lootInBag8 = loot.get(randomloot8);
-        ItemStack lootInBag9 = loot.get(randomloot9);
-
+        Material lootInBag = loot.get(randomloot);
+        Material lootInBag2 = loot.get(randomloot2);
+        Material lootInBag3 = loot.get(randomloot3);
+        Material lootInBag4 = loot.get(randomloot4);
+        Material lootInBag5 = loot.get(randomloot5);
+        Material lootInBag6 = loot.get(randomloot6);
+        Material lootInBag7 = loot.get(randomloot7);
+        Material lootInBag8 = loot.get(randomloot8);
+        Material lootInBag9 = loot.get(randomloot9);
+        System.out.println(lootInBag.getData().getName() + lootInBag2.getData().getName() + lootInBag3.getData().getName()
+                + lootInBag4.getData().getName() + lootInBag5.getData().getName() + lootInBag6.getData().getName()
+                + lootInBag7.getData().getName() + lootInBag8.getData().getName() + lootInBag9.getData().getName());
         InventoryManager.lootBags.clear();
         Items.setItemMeta();
-        InventoryManager.lootBags.setItem(0, lootInBag);
-        InventoryManager.lootBags.setItem(1, lootInBag2);
-        InventoryManager.lootBags.setItem(2, lootInBag3);
-        InventoryManager.lootBags.setItem(3, lootInBag4);
-        InventoryManager.lootBags.setItem(4, lootInBag5);
-        InventoryManager.lootBags.setItem(5, lootInBag6);
-        InventoryManager.lootBags.setItem(6, lootInBag7);
-        InventoryManager.lootBags.setItem(7, lootInBag8);
-        InventoryManager.lootBags.setItem(8, lootInBag9);
+        InventoryManager.lootBags.setItem(0, new ItemStack(lootInBag));
+        InventoryManager.lootBags.setItem(1, new ItemStack(lootInBag2));
+        InventoryManager.lootBags.setItem(2, new ItemStack(lootInBag3));
+        InventoryManager.lootBags.setItem(3, new ItemStack(lootInBag4));
+        InventoryManager.lootBags.setItem(4, new ItemStack(lootInBag5));
+        InventoryManager.lootBags.setItem(5, new ItemStack(lootInBag6));
+        InventoryManager.lootBags.setItem(6, new ItemStack(lootInBag7));
+        InventoryManager.lootBags.setItem(7, new ItemStack(lootInBag8));
+        InventoryManager.lootBags.setItem(8,new ItemStack( lootInBag9));
     }
 }
